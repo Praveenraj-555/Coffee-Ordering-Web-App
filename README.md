@@ -1,7 +1,25 @@
 # ☕ Brew & Co — Coffee Ordering Web App
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/fb7b4d64-19dc-4e24-a7e6-99c9725e5f1a" 
+    alt="Project Preview" 
+    width="1000" 
+    height="520"
+  />
+</p>
 
-<p align:center><img width="1000" height="520" alt="Image" src="https://github.com/user-attachments/assets/fb7b4d64-19dc-4e24-a7e6-99c9725e5f1a" /></p>
-<p>visit page: <a href="https://coffee-ordering-xi.vercel.app">https://coffee-ordering-xi.vercel.app</a></p>
+<p align="center">
+  🔗 <b>Live Demo: click the below link</b> 
+</p>
+<p align="center">
+  <a href="https://coffee-ordering-xi.vercel.app" target="_blank">
+    coffee-ordering-xi.vercel.app
+  </a>
+</p>
+
+
+
+
 A fully functional, single-page coffee ordering web application built with vanilla HTML, CSS, and JavaScript. No frameworks, no dependencies — just a warm, cozy café experience right in your browser.
 
 ---
