@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brewed Awakenings — Artisan Coffee</title>
+  <meta name="description" content="Order freshly roasted, ethically sourced artisan coffee online. Espresso, Lattes, Cold Brews & more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav>
+    <div class="nav-logo">Brewed <span>Awakenings</span></div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#why-us">Our Story</a></li>
+      <li><a href="#footer">Find Us</a></li>
+    </ul>
+    <button id="cart-btn" aria-label="Open cart">
+      ☕ Cart <span id="cart-count">0</span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">☕ Artisan Coffee Since 2012</div>
+      <h1>Every Cup Tells a <em>Story</em></h1>
+      <p>Handcrafted brews made with single-origin beans, roasted in-house every morning — because life's too short for ordinary coffee.</p>
+      <a href="#menu" class="hero-cta">Explore Our Menu →</a>
+    </div>
+  </section>
+
+  <!-- ─── WHY US ─── -->
+  <section class="why-us" id="why-us">
+    <div class="why-header">
+      <div class="section-label">Our Promise</div>
+      <h2 class="section-title" style="color:var(--cream)">Why Coffee Lovers Choose Us</h2>
+      <p class="section-sub" style="margin:0 auto; text-align:center">We believe great coffee starts long before the cup — from the farm to your hands.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">🌱</span>
+        <h3>Ethically Sourced</h3>
+        <p>Direct-trade beans from small family farms across Colombia, Ethiopia, and Guatemala. Every purchase supports fair wages.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔥</span>
+        <h3>Freshly Roasted Daily</h3>
+        <p>Our beans are roasted in small batches every morning so you always get peak freshness and flavor in every sip.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🧑‍🍳</span>
+        <h3>Expert Baristas</h3>
+        <p>Our certified baristas have trained across Italy and Japan, bringing world-class technique to every single drink.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🌍</span>
+        <h3>Eco-Conscious</h3>
+        <p>Compostable cups, zero-waste packaging, and carbon-neutral delivery — because the planet deserves good coffee too.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MENU ─── -->
+  <section class="menu" id="menu">
+    <div class="menu-header">
+      <div class="section-label">Our Menu</div>
+      <h2 class="section-title">Order Your Favourite Brew</h2>
+      <p class="section-sub" style="margin:0 auto; text-align:center">From bold espressos to silky lattes — there's a perfect cup for every mood.</p>
+    </div>
+    <div class="menu-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="hot">Hot ☕</button>
+      <button class="filter-btn" data-filter="cold">Cold 🧊</button>
+      <button class="filter-btn" data-filter="specialty">Specialty ✨</button>
+      <button class="filter-btn" data-filter="food">Bites 🍞</button>
+    </div>
+    <div class="menu-grid" id="menu-grid"></div>
+  </section>
+
+  <!-- ─── CART PANEL ─── -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-panel" id="cart-panel" role="dialog" aria-label="Shopping cart">
+    <div class="cart-header">
+      <span class="cart-title">🛒 Your Order</span>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">
+        <span class="cart-empty-icon">☕</span>
+        <p>Your cart is empty.<br />Add something delicious!</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-total-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <div class="cart-total-row"><span>Delivery</span><span>$1.50</span></div>
+      <div class="cart-total-row grand"><span>Total</span><span id="grand-total">$1.50</span></div>
+      <button class="checkout-btn" id="checkout-btn" disabled>Place Order ☕</button>
+    </div>
+  </aside>
+
+  <!-- ─── ORDER CONFIRMATION ─── -->
+  <div class="order-overlay" id="order-overlay">
+    <div class="order-modal">
+      <span class="order-icon">☕</span>
+      <h2>Your order is being prepared!</h2>
+      <p>Sit back and relax — our baristas are crafting your cup with love. Estimated time: <strong>10–15 minutes</strong>.</p>
+      <div class="order-summary" id="order-summary"></div>
+      <button class="new-order-btn" id="new-order-btn">Start New Order</button>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <footer id="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Brewed <span>Awakenings</span></div>
+        <p>Crafting exceptional coffee experiences since 2012. Every cup is a moment of joy — savour it.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <div class="hours-row"><span>Mon – Fri</span><span>6am – 9pm</span></div>
+        <div class="hours-row"><span>Saturday</span><span>7am – 10pm</span></div>
+        <div class="hours-row"><span>Sunday</span><span>8am – 8pm</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <p>A2 Road,<br />4th Avenue Street, T.Nagar<br />Chennai</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📞 +91 7600546722<br />✉️ hello@brewedawakenings.ca<br />📸 @brewedawakenings</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Brewed Awakenings Coffee Co. — Made with ☕ &amp; ❤️
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
