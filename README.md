@@ -13,11 +13,8 @@ A fully functional, single-page coffee ordering web application built with vanil
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [How to Use](#how-to-use)
-- [Customization Guide](#customization-guide)
 - [Menu Items](#menu-items)
 - [Cart & Ordering System](#cart--ordering-system)
-- [Design System](#design-system)
-- [Browser Compatibility](#browser-compatibility)
 - [Future Improvements](#future-improvements)
 - [License](#license)
 
@@ -120,52 +117,6 @@ That's it. No npm, no build step, no server needed.
 
 ---
 
-## Customization Guide
-
-Since everything is in one HTML file, customization is straightforward even for beginners.
-
-### Changing the Café Name
-Search for `"Brew & Co"` in the file and replace it with your café's name.
-
-### Editing Menu Items
-Find the section in the HTML that contains the drink cards. Each card looks like this:
-
-```html
-<div class="menu-card">
-  <div class="menu-emoji">☕</div>
-  <h3>Espresso</h3>
-  <p>Rich and bold, a classic double shot.</p>
-  <div class="menu-footer">
-    <span class="price">₹120</span>
-    <button class="add-btn" onclick="addToCart('Espresso', 120)">Add to Cart</button>
-  </div>
-</div>
-```
-
-To add a new item, copy this block and update the emoji, name, description, price, and the values inside `addToCart(...)`.
-
-### Changing Prices
-Update the price displayed in the `<span class="price">` tag and the number in the `addToCart()` function call — both must match.
-
-### Changing Colors
-At the top of the `<style>` block, you'll find CSS variables:
-
-```css
-:root {
-  --primary: #6f4e37;       /* Main brown */
-  --accent: #c8963e;        /* Warm gold */
-  --bg: #fdf6ec;            /* Cream background */
-  --text: #2c1a0e;          /* Dark text */
-}
-```
-
-Change these hex values to restyle the entire app instantly.
-
-### Changing the Currency Symbol
-Search for `₹` in the file and replace it with your preferred currency symbol (`$`, `€`, `£`, etc.).
-
----
-
 ## Menu Items
 
 | # | Item | Description | Price |
@@ -192,32 +143,6 @@ The cart is powered entirely by JavaScript with no external libraries. Here's ho
 - The cart UI re-renders every time the state changes
 - When an order is placed, the cart state is cleared and a confirmation view is shown
 - There is no backend — orders are not saved or sent anywhere (see Future Improvements)
-
----
-
-## Design System
-
-| Element | Value |
-|---------|-------|
-| Primary Font | Google Fonts — *Playfair Display* (headings), *Lato* (body) |
-| Primary Color | `#6f4e37` — Coffee Brown |
-| Accent Color | `#c8963e` — Warm Gold |
-| Background | `#fdf6ec` — Cream |
-| Text Color | `#2c1a0e` — Dark Espresso |
-| Border Radius | `12px` (cards), `8px` (buttons) |
-| Box Shadow | Soft warm shadow on cards and sidebar |
-
----
-
-## Browser Compatibility
-
-| Browser | Supported |
-|---------|-----------|
-| Chrome 90+ | ✅ |
-| Firefox 88+ | ✅ |
-| Safari 14+ | ✅ |
-| Edge 90+ | ✅ |
-| Internet Explorer | ❌ Not supported |
 
 ---
 
